@@ -1,0 +1,20 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+             xmlns:vm="using:NuclearMusicPlayer__AvaloniaExtension.ViewModels"
+             x:Class="NuclearMusicPlayer__AvaloniaExtension.Views.LogsView">
+
+  <Design.DataContext>
+    <vm:LogsViewModel/>
+  </Design.DataContext>
+
+  <Grid>
+    <TextBlock Margin="3">Logs</TextBlock>
+    <TextBox AcceptsReturn="True" TextWrapping="Wrap"
+             Margin="3,30,3,3" Text="{Binding LogsText}" ></TextBox>
+  </Grid>
+
+</UserControl>

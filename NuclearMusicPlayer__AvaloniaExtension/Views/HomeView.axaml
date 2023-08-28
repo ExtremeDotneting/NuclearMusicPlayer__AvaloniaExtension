@@ -1,0 +1,36 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="450"
+             xmlns:vm="using:NuclearMusicPlayer__AvaloniaExtension.ViewModels"
+             x:Class="NuclearMusicPlayer__AvaloniaExtension.Views.HomeView">
+
+  <UserControl.Styles>
+    <StyleInclude Source="avares://NuclearMusicPlayer__AvaloniaExtension/Styles.axaml"></StyleInclude>
+  </UserControl.Styles>
+
+  <Design.DataContext>
+    <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+    <vm:HomeViewModel/>
+  </Design.DataContext>
+
+  <StackPanel HorizontalAlignment="Stretch" >
+    <Grid HorizontalAlignment="Stretch"
+                Margin="3">
+      <Label VerticalAlignment="Center" HorizontalAlignment="Left">Api Port</Label>
+      <TextBox HorizontalAlignment="Stretch" Margin="60,0,0,0"></TextBox>
+    </Grid>
+
+    <Button Classes="Primary" >Make backup</Button>
+    <Button Classes="Primary">Load backup</Button>
+    <TextBlock Classes="Spliter">—————————————————</TextBlock>
+    <Button Classes="Primary">Merge playlists</Button>
+    <TextBlock Classes="Spliter">—————————————————</TextBlock>
+    <Button Classes="Primary">Normalize playlists</Button>
+
+    <!--<TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>-->
+
+  </StackPanel>
+</UserControl>

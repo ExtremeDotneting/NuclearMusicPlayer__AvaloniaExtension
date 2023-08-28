@@ -1,0 +1,29 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:NuclearMusicPlayer__AvaloniaExtension.ViewModels"
+        xmlns:v="using:NuclearMusicPlayer__AvaloniaExtension.Views"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" 
+        Width="1000" Height="500"
+        x:Class="NuclearMusicPlayer__AvaloniaExtension.Views.MainWindow"
+        Icon="/Assets/avalonia-logo.ico"
+        Title="NuclearMusicPlayer__AvaloniaExtension">
+
+  <Design.DataContext>
+    <!-- This only sets the DataContext for the previewer in an IDE,
+             to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+    <vm:MainWindowViewModel/>
+  </Design.DataContext>
+
+  <Grid ColumnDefinitions="50*,2,50*" >
+    <UserControl Content="{Binding ContentViewModel}" Grid.Column="0">      
+    </UserControl>
+    
+    <GridSplitter Grid.Column="1" Background="Gray" 
+                  ResizeDirection="Columns" Margin="5,0"/>
+
+    <v:LogsView Grid.Column="2"></v:LogsView>
+  </Grid>
+
+</Window>
