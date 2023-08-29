@@ -19,7 +19,7 @@ namespace NuclearMusicPlayer__AvaloniaExtension.Services
 
         public string BackupDirectory = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "playlistBackupsDir");
         public const string DefaultThumbnail =
-            "https://raw.githubusercontent.com/ExtremeDotneting/NuclearMusicPlayer__AvaloniaExtension/master/Docs/music.png";
+            "https://raw.githubusercontent.com/ExtremeDotneting/NuclearMusicPlayer__AvaloniaExtension/master/NuclearMusicPlayer__AvaloniaExtension/Assets/icon.jpg";
         public string ConfigJsonPath { get; set; }
 
         NuclearMusicPlayerService()
