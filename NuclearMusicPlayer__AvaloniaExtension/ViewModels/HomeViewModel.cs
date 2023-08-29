@@ -7,12 +7,12 @@ namespace NuclearMusicPlayer__AvaloniaExtension.ViewModels
 {
     public class HomeViewModel : ViewModelBase
     {
-        public string ApiUrl
+        public string ConfigJsonPath
         {
-            get => NuclearMusicPlayerService.Inst.ApiRootUrl;
+            get => NuclearMusicPlayerService.Inst.ConfigJsonPath;
             set
             {
-                NuclearMusicPlayerService.Inst.ApiRootUrl = value;
+                NuclearMusicPlayerService.Inst.ConfigJsonPath = value;
                 this.RaisePropertyChanging();
             }
         }
@@ -21,7 +21,7 @@ namespace NuclearMusicPlayer__AvaloniaExtension.ViewModels
         {
             try
             {
-                await NuclearMusicPlayerService.Inst.MakeBacup();
+                await NuclearMusicPlayerService.Inst.MakeBackup();
             }
             catch (Exception ex)
             {

@@ -17,18 +17,16 @@
   </Design.DataContext>
 
   <StackPanel HorizontalAlignment="Stretch" >
-    <Grid HorizontalAlignment="Stretch"
-                Margin="3">
-      <Label VerticalAlignment="Center" HorizontalAlignment="Left">Api Url</Label>
-      <TextBox HorizontalAlignment="Stretch" Margin="60,0,0,0"
-               Text="{Binding ApiUrl}"></TextBox>
-    </Grid>
+    <Label VerticalAlignment="Center" HorizontalAlignment="Left"
+           Margin="3">Path to config.json</Label>
+    <TextBox HorizontalAlignment="Stretch" Margin="3,3,3,15"
+             Text="{Binding ConfigJsonPath}"></TextBox>
 
     <Button Classes="Primary" Command="{Binding MakeBackup}">Make backup</Button>
     <Button Classes="Primary" Command="{Binding GoToLoadBackup}">Load backup</Button>
-    <TextBlock Classes="Spliter">—————————————————</TextBlock>
+    <!--<TextBlock Classes="Spliter">—————————————————</TextBlock>-->
     <Button Classes="Primary">Merge playlists</Button>
-    <TextBlock Classes="Spliter">—————————————————</TextBlock>
+    <!--<TextBlock Classes="Spliter">—————————————————</TextBlock>-->
     <Button Classes="Primary">Normalize playlists</Button>
 
     <!--<TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>-->
