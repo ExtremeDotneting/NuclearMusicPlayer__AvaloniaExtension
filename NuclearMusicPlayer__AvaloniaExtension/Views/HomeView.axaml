@@ -25,9 +25,10 @@
     <Button Classes="Primary" Command="{Binding MakeBackup}">Make backup</Button>
     <Button Classes="Primary" Command="{Binding GoToLoadBackup}">Load backup</Button>
     <!--<TextBlock Classes="Spliter">—————————————————</TextBlock>-->
-    <Button Classes="Primary">Merge playlists</Button>
+    <Button Classes="Primary" Command="{Binding GoToMergePlaylist}"
+            >Merge playlists</Button>
     <!--<TextBlock Classes="Spliter">—————————————————</TextBlock>-->
-    <Button Classes="Primary">Normalize playlists</Button>
+    <Button Classes="Primary" Command="{Binding NormalizePlaylists}">Normalize playlists</Button>
 
     <!--<TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>-->
 

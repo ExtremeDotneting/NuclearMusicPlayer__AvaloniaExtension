@@ -17,11 +17,11 @@ namespace NuclearMusicPlayer__AvaloniaExtension.ViewModels
             }
         }
 
-        public async Task MakeBackup()
+        public void MakeBackup()
         {
             try
             {
-                await NuclearMusicPlayerService.Inst.MakeBackup();
+                NuclearMusicPlayerService.Inst.MakeBackup();
             }
             catch (Exception ex)
             {
@@ -29,9 +29,27 @@ namespace NuclearMusicPlayer__AvaloniaExtension.ViewModels
             }
         }
 
-        public async Task GoToLoadBackup()
+        public void GoToLoadBackup()
         {
             NavigatorService.Push(new RestoreBackupViewModel());
+        }
+
+        public void GoToMergePlaylist()
+        {
+            NavigatorService.Push(new MergePlaylistsViewModel());
+        }        
+
+        public void NormalizePlaylists()
+        {
+            try
+            {
+                NuclearMusicPlayerService.Inst.NormalizePlaylists();
+            }
+            catch (Exception ex)
+            {
+                LogsService.WriteLine(ex.ToString());
+            }
+            
         }
     }
 }

@@ -27,11 +27,11 @@ namespace NuclearMusicPlayer__AvaloniaExtension.ViewModels
             NavigatorService.Pop();
         }
 
-        public async Task RestoreBackup()
+        public void RestoreBackup()
         {
             try
             {
-                await NuclearMusicPlayerService.Inst.RestoreBackup(SelectedBackup.Name);
+                NuclearMusicPlayerService.Inst.RestoreBackup(SelectedBackup.Name);
             }
             catch (Exception ex)
             {
