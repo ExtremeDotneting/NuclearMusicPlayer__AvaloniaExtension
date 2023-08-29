@@ -9,8 +9,6 @@ namespace NuclearMusicPlayer__AvaloniaExtension.ViewModels
         {
             NavigatorService.Init(this);
             NavigatorService.Push(new HomeViewModel());
-            NavigatorService.Push(new MergePlaylistsViewModel());
-            NavigatorService.Push(new RestoreBackupViewModel());
         }
 
 

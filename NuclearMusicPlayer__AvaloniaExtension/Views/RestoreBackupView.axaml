@@ -17,6 +17,7 @@
   <StackPanel HorizontalAlignment="Stretch" >
 
     <ComboBox Items="{Binding Backups}" HorizontalAlignment="Stretch"
+              SelectedItem="{Binding SelectedBackup}"
               Margin="3">
       <ComboBox.ItemTemplate>
         <DataTemplate>
@@ -25,7 +26,7 @@
       </ComboBox.ItemTemplate>
     </ComboBox>
 
-    <Button Classes="Primary" >Restore</Button>
+    <Button Classes="Primary" Command="{Binding RestoreBackup}">Restore</Button>
     <Button Classes="Primary" Command="{Binding GoBack}" >← Back</Button>
   </StackPanel>
 </UserControl>

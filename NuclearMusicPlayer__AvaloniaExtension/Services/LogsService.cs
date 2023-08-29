@@ -9,7 +9,7 @@ namespace NuclearMusicPlayer__AvaloniaExtension.Services
 {
     public static class LogsService
     {
-        public static void AddString(string str)
+        public static void WriteLine(string str)
         {
             LogsViewModel.AddString(str);
         }

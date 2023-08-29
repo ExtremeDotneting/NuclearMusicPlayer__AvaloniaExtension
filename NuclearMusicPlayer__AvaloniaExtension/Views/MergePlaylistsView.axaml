@@ -17,7 +17,7 @@
 
   <StackPanel HorizontalAlignment="Stretch" >
 
-    <ListBox Items="{Binding Playlists}" MaxHeight="300" >
+    <ListBox Items="{Binding Playlists}"  MaxHeight="300">
       <ListBox.ItemTemplate>
         <DataTemplate>
           <Border BorderBrush="White" BorderThickness="1" Background="White"
