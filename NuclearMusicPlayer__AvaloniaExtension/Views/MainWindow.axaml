@@ -7,7 +7,7 @@
         mc:Ignorable="d" 
         Width="1000" Height="500"
         x:Class="NuclearMusicPlayer__AvaloniaExtension.Views.MainWindow"
-        Icon="/Assets/avalonia-logo.ico"
+        Icon="/Assets/icon.jpg"
         Title="NuclearMusicPlayer__AvaloniaExtension">
 
   <Design.DataContext>
